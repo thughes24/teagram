@@ -1,0 +1,30 @@
+.image-block-container
+  .image-block
+    %h4.pull-right=@image.time_since_posted
+    =link_to user_path(@image.user) do
+      %h4.pull-left=@image.user.username
+    =image_tag @image.image_url, class: "img-responsive img-rounded", style: "width:100%"
+    .row
+      .col-md-8
+        %h4=@image.displays_caption_with_tags_as_links
+      .col-md-4
+        %h5
+          -if @image.likes.map(&:user_id).include?(current_user.id)
+            =link_to "Like ( #{@image.likes.count} )", like_path(@image), method: 'post', class: 'pull-right btn btn-sm btn-primary active'
+          -else
+            =link_to "Like ( #{@image.likes.count} )", like_path(@image), method: 'post', class: 'pull-right btn btn-sm btn-primary'
+          =link_to " Comment", image_path(@image, comment: @image.id.to_s), class: 'pull-right btn btn-sm btn-success margin-right'
+      -if params[:comment] == @image.id.to_s
+        .row
+          .col-md-12
+            =form_for @comment, url: image_comments_path(@image), class: "form inline-form" do |f|
+              .form-group
+                =f.text_area :body, class: "form-control"
+              =f.submit "Comment", class: "btn btn-default"
+      .row
+        .col-md-12 
+          -@image.comments.each do |comment|
+            .row
+              .col-md-12
+                %h4
+                  #{comment.user.username} - #{comment.body}

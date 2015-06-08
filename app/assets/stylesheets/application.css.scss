@@ -1,0 +1,44 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'rails_bootstrap_forms';
+.vertical-center {
+  margin-top:20vh;
+  padding-bottom:10px;
+}
+.image-block-container {
+  width:80%;
+  margin:0 auto;
+  padding-bottom:2%;
+}
+.image-block {
+  width:85%;
+  margin:0 auto;
+  padding-bottom:5%;
+}
+body {
+  padding-top: 30px;
+}
+
+.margin-right {
+  margin-right:3%;
+}
+
+.centered {
+  margin: 0 auto;
+}
+.vertically-centered {
+  vertical-align: center;
+}
+.user-img-thumbs {
+  padding:1%;
+  width:32%;
+  height:32%;
+}
+
+.col-centered {
+  float:none;
+  margin:0 auto;
+}
+.search_bar {
+  padding-top:1.9%;
+}

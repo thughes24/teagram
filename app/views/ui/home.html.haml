@@ -1,0 +1,13 @@
+-3.times do
+  .image-block-container
+    .image-block
+      %h4.pull-right 2hrs Ago
+      %h4.pull-left Username
+      %img.img-responsive.img-rounded{src: "/images/600x600.png",style: "width:100%;"}
+      .row
+        .col-md-9
+          %h4 Image Caption #image #caption #other #etc cmaaaooon this is an absurdly big caption, maybe I will limit this so it can only be a certain lenght, i guess we will wait and see how this turns out! I don't want to restrict it too much ya know?
+        .col-md-3
+          %h5
+            =link_to "Like ", nil, class: 'pull-right btn btn-sm btn-primary'
+            =link_to " Comment", nil, class: 'pull-right btn btn-sm btn-success margin-right'

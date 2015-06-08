@@ -1,0 +1,14 @@
+.row
+  .col-md-8.col-centered.text-center
+    %form.form-vertical
+      .form-group
+        %label{for: "username"} Edit Username:
+        %input.form-control{type: "text", name:"username"}
+      .form-group
+        %label.control-label{for: "email"} Edit Email:
+        %input.form-control{type: "text", name: "email"}
+      .form-group
+        %label.control-label{for: "profilepic"} Upload Profile Picture:
+        %input.form-control{type: "file", name: "profilepic"}
+      %input.btn.btn-primary{type: 'submit', value: "Update"}
+

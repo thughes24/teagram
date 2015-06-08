@@ -1,0 +1,25 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      =link_to 'TeaGram', landing_path, class: 'navbar-brand'
+    -if current_user
+      %ul.nav.navbar-nav.navbar-right
+        %li.search_bar
+          =bootstrap_form_tag url: search_path, layout: :inline, method: 'get' do |f|
+            =f.text_field :search, icon: 'search', skip_label: true
+            =f.submit "Search", class: 'btn btn-primary btn-sm'
+        %li
+          =link_to '+ Upload Photo',upload_1_path
+        %li
+          =link_to explore_path do
+            <span class='glyphicon glyphicon-road'></span> Explore
+        %li.dropdown
+          =link_to "#", class: 'dropdown-toggle','data-toggle' => 'dropdown' do
+            #{current_user.username} <span class='caret'></span>
+          %ul.dropdown-menu
+            %li
+              =link_to user_path(current_user) do
+                <span class='glyphicon glyphicon-user'></span> View Profile
+            %li
+              =link_to logout_path, method: 'delete' do
+                <span class='glyphicon glyphicon-remove'></span> Logout

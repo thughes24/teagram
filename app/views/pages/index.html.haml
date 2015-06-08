@@ -1,0 +1,14 @@
+.row
+  .col-md-4
+  .col-md-4.well.text-center
+    %h1 Welcome to TeaGram!
+    %p Post, View and Like Photos from around the world!
+    -if params[:tab] == 'log-in'
+      =render '/pages/log_in'
+    -elsif params[:tab] == 'sign-up'
+      =render '/pages/sign_up'
+    -else
+      .col-center
+        =link_to "Log In",landing_path(tab: "log-in"), class: 'btn btn-primary'
+        =link_to "Sign Up",landing_path(tab: "sign-up"), class: 'btn btn-danger'
+  .col-md-4

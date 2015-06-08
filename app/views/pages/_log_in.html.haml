@@ -1,0 +1,6 @@
+.col-center
+  =bootstrap_form_tag url: '/log-in' do |f|
+    =f.text_field :username
+    =f.password_field :password
+    =f.submit "Log In", class: 'btn btn-warning'
+  =link_to "Back", landing_path, class: 'btn btn-danger'

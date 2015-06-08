@@ -1,0 +1,19 @@
+.row
+  .col-md-4
+  .col-md-4.well.text-center.vertical-center
+    %h1 Welcome to TeaGram!
+    %p Signing up is easy, just enter the fields bellow!
+    .col-center
+      %form
+        .form-group
+          %label{for: "username"} Username:
+          %input.form-control{type: 'text', name: "username"}
+        .form-group
+          %label{for: "email"} Email:
+          %input.form-control{type: 'text', name: 'email'}
+        .form-group
+          %label{for: "password"} Password:
+          %input.form-control{type: 'password', name: 'password'}
+        %input.btn.btn-primary{type: 'submit', value: "Create Account"}
+        %button.btn.btn-danger Back
+  .col-md-4

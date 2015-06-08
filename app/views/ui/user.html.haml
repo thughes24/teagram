@@ -1,0 +1,23 @@
+.row
+  .col-md-3.col-xs-5
+    %img.img-thumbnail.centered{src: "/images/200x200.jpg"}
+  .col-md-9.col-xs-7.centered
+    .row.vertically-centered
+      .col-md-4
+        %p.btn.btn-primary.btn-lg.active.margin-right <b> Images: </b>
+      .col-md-4
+        %p.btn.btn-success.btn-lg.active.margin-right <b> Followers: </b>
+      .col-md-4
+        %p.btn.btn-danger.btn-lg.active <b> Following: </b>
+      .row
+      .row
+      .row.vertically-centered
+        .col-md-5.col-xs-8.col-centered
+          -2.times do
+            .panel
+          %p.btn.btn-info.btn-lg.btn-block.active Edit Account
+%hr
+.row
+  .col-md-12.centered
+    -9.times do
+      %img.user-img-thumbs{src: '/images/250x250.png'}

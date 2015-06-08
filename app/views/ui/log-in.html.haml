@@ -1,0 +1,16 @@
+.row
+  .col-md-4
+  .col-md-4.well.text-center.vertical-center
+    %h1 Welcome to TeaGram!
+    %p Post, View and Like Photos from around the world!
+    .col-center
+      %form
+        .form-group
+          %label{for: "username"} Username:
+          %input.form-control{type: 'text', name: "username"}
+        .form-group
+          %label{for: "password"} Password:
+          %input.form-control{type: 'password', name: 'password'}
+        %input.btn.btn-warning{type: 'submit', value: "Log In"}
+        %button.btn.btn-danger Back
+  .col-md-4

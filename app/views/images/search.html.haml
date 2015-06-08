@@ -1,0 +1,6 @@
+-@images.each do |image|
+  =link_to image_path(image) do
+    %img.user-img-thumbs{src: image.image_url}
+-if @images.count == 0
+  .text-center.text-danger
+    No images with that hashtag found
