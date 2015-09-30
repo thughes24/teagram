@@ -12,7 +12,7 @@
         .col-md-4
           %h5
           -if image.likes.map(&:user_id).include?(current_user.id)
-            =link_to "Like ( #{image.likes.count} )", like_path(image), method: 'post', class: 'pull-right btn btn-sm btn-primary active'
+            =link_to "Unlike ( #{image.likes.count} )", like_path(image), method: 'post', class: 'pull-right btn btn-sm btn-primary active'
           -else
             =link_to "Like ( #{image.likes.count} )", like_path(image), method: 'post', class: 'pull-right btn btn-sm btn-primary'
           =link_to " Comment", explore_path(comment: image.id.to_s), class: 'pull-right btn btn-sm btn-success margin-right'

@@ -11,12 +11,12 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'bootstrap_form'
 gem 'bcrypt'
-gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
 gem 'carrierwave_direct'
 gem 'sidekiq'
 gem 'time_difference'
+gem 'unicorn'
 
 group :development do
   gem 'thin'

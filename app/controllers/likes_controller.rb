@@ -3,10 +3,12 @@ class LikesController < ApplicationController
   def create
     @like = Like.new(image_id: params[:id], user: current_user)
     if @like.save
-      redirect_to :back
     else
       Like.find_by(user_id: current_user.id, image_id: params[:id]).delete
-      redirect_to :back
+    end
+      respond_to do |format|
+      format.html {redirect_to :back}
+      format.js
     end
   end
 end
